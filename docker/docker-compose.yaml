@@ -26,7 +26,7 @@ services:
   spring:
     container_name: springapp
     restart: always
-    image: projet:latest
+    image: verkeur08/gestionetablissement:latest
     ports:
       - "8080:5000"
     environment:
