@@ -63,7 +63,7 @@ pipeline {
                         sh 'cp $MyResto MyResto.pem'
                     }
                 }
-                dir("Terraform/app") {
+                dir("terraform/app") {
                         sh'terraform init'
                 }
             }
@@ -77,7 +77,7 @@ pipeline {
             }
 
             steps {
-                dir("Terraform/app") {
+                dir("terraform/app") {
                     sh 'terraform plan'
                 }
             }
@@ -91,7 +91,7 @@ pipeline {
             }
 
             steps {
-                dir("Terraform/app") {
+                dir("terraform/app") {
                     sh "terraform apply --auto-approve"
                 }
             }
@@ -103,7 +103,7 @@ pipeline {
             }
 
             steps {
-                dir("Terraform/app") {
+                dir("terraform/app") {
                     sh "terraform destroy --auto-approve"
                 }
             }
