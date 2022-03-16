@@ -26,3 +26,25 @@ Pour supprimer l'instance ec2
 > 5. cocher la case 'destroy'
 > 6. cliquer sur build
 > 7. attendre que toutes les taches se finissent
+
+ 
+
+## Test sans pipeline
+
+1. Créer un dossier .aws à la racine du projet
+2. remplir le dossier avec la clé .pem de votre compte aws
+3. créer un fichier credentials comme ci-dessous:
+`   [default]
+   aws_access_key_id = ""
+   aws_secret_access_key = ""`
+4. Ouvrir un terminal à la racine du fichier 
+5. Ce rendre dans le dossier Terraform/App 
+`cd terraform/app`
+6. Exécuter le init
+`terraform init`
+7. Exécuter le apply
+   `terraform apply`
+8. Puis saisir yes
+9. Récupérer l'adresse ip ce trouvant dans le fichier ip_connexion.txt
+10. Ouvrir un navigateur et ce rendre à cette url.
+

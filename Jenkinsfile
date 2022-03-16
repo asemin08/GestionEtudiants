@@ -109,14 +109,7 @@ pipeline {
             }
         }
 
-        stage('read') {
-           steps {
-           dir("terraform/app") {
-                 sh "ls"
-                 sh "cat ip_connection"
-               }
-           }
-        }
+
 
     }
 }
