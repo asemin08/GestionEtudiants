@@ -5,7 +5,7 @@ variable "zone_dispo" {
 
 variable "credentials" {
   type = string 
-  default = "../.aws/credentials"
+  default = "../../.aws/credentials"
 }
 
 variable "auteur" {

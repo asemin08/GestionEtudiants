@@ -1,6 +1,6 @@
 variable "auteur" {
   type    = string
-  default = "allan & brice"
+  default = "allan"
 }
 
 variable "ec2_name" {
@@ -20,7 +20,7 @@ variable "type_instance" {
 
 variable "cle_ssh" {
   type    = string
-  default = "GestionGlasses"
+  default = "MyResto"
 }
 
 variable "securite_groupe" {
@@ -56,5 +56,5 @@ variable "git_proprietaire" {
 
 variable "git_projet" {
   type    = string
-  default = "templateProjet"
+  default = "GestionEtudiants"
 }

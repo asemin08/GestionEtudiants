@@ -1,6 +1,13 @@
-commande pour lancé le build de l'image:
+# Projet de Gestion D'établissement
+
+Ce projet pour l'instant permet juste la création et la visualisation d'étudiant.
 
 
-``
-docker build -t verkeur08/gestionetablissement:latest  --build-arg branch=main --build-arg depoGit=GestionEtudiants --build-arg autheurGit=asemin08 --build-arg tagImage=3.8.4-openjdk-17-slim --no-cache .
-``
+## Pré-requis
+* java jdk17
+* docker
+* ansible
+* terraform
+
+
+## Pour exécuter le 
