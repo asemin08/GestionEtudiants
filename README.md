@@ -32,7 +32,7 @@ Pour supprimer l'instance ec2
 ## Test sans pipeline
 
 1. Créer un dossier .aws à la racine du projet
-2. remplir le dossier avec la clé .pem de votre compte aws
+2. remplir le dossier avec la clé.pem nommé votre clé  MyResto.pem de votre compte aws
 3. créer un fichier credentials comme ci-dessous:
 `   [default]
    aws_access_key_id = ""
