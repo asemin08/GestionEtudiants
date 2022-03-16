@@ -10,4 +10,6 @@ Ce projet pour l'instant permet juste la création et la visualisation d'étudia
 * terraform
 
 
-## Pour exécuter le 
+## Pour exécuter le projet 
+
+1. Ce rendre à cette url [jenkins](http://146.59.154.110:8080/job/GestionEtudiant/)
