@@ -19,8 +19,9 @@ resource "aws_instance" "projet-ec2" {
   }
 
   provisioner "local-exec" {
-    command = "echo 'EC2 en cours de création et dispo http://${var.ip_public}:8080/'"
+    command = "echo 'appli est disponible sur cette url : http://${var.ip_public}:8080/ >> ip_connection.txt'"
   }
+
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
@@ -28,6 +29,7 @@ resource "aws_instance" "projet-ec2" {
       "sudo amazon-linux-extras install -y ansible2",
       "git clone -b main https://github.com/${var.git_proprietaire}/${var.git_projet}.git",
       "cd ${var.git_projet}/ansible/",
+      "ansible-galaxy install -r requirements.yml --force",
       "ansible-playbook -i hosts.yml projet.yml"
     ]
     connection {
