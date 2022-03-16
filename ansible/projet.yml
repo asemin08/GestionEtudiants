@@ -67,5 +67,16 @@
         packages:
           - docker
           - docker-compose
-  roles:
-  - asemin08.templateprojet_role
+  tasks:
+    - name: "Download data from git repo"
+      git:
+        repo: 'https://github.com/asemin08/GestionEtudiants.git'
+        version: 'security'
+        dest: '/home/ec2-user/GestionEtudiants'
+
+    - name: "Build an image for MyResto"
+      command: "chdir=/home/ec2-user/GestionEtudiants/docker docker build -t gestionetablissement:latest  --build-arg branch=main --build-arg depoGit=GestionEtudiants --build-arg autheurGit=asemin08 --build-arg tagImage=3.8.4-openjdk-17-slim --no-cache ."
+
+    - name: "Docker-compose up database"
+      shell: /usr/local/bin/docker-compose -f /home/ec2-user/GestionEtudiants/docker/docker-compose.yaml up -d spring
+
