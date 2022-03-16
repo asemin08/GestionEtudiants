@@ -71,7 +71,7 @@
     - name: "Download data from git repo"
       git:
         repo: 'https://github.com/asemin08/GestionEtudiants.git'
-        version: 'security'
+        version: 'main'
         dest: '/home/ec2-user/GestionEtudiants'
 
     - name: "Build an image for MyResto"
