@@ -19,9 +19,8 @@ resource "aws_instance" "projet-ec2" {
   }
 
   provisioner "local-exec" {
-    command = "echo l'appli est disponible sur cette url : http://${var.ip_public}:8080/ >> ip_connection.txt"
+    command = "echo 'EC2 en cours de création et dispo http://${var.ip_public}:8080/'"
   }
-
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
