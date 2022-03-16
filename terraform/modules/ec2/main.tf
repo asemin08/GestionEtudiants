@@ -31,7 +31,7 @@ resource "aws_instance" "projet-ec2" {
     connection {
       type        = "ssh"
       user        = "${var.utilisateur_ssh}"
-      private_key = file("../.aws/${var.cle_ssh}.pem")
+      private_key = file("../../.aws/${var.cle_ssh}.pem")
       host        = "${self.public_ip}"
     }
   }
