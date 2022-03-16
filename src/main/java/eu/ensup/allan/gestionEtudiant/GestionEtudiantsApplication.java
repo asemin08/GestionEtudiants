@@ -1,13 +1,13 @@
-package eu.ensup.allan.projetAllan;
+package eu.ensup.allan.gestionEtudiant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjetAllanApplication {
+public class GestionEtudiantsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetAllanApplication.class, args);
+		SpringApplication.run(GestionEtudiantsApplication.class, args);
 	}
 
 }
