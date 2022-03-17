@@ -108,6 +108,17 @@ pipeline {
                 }
             }
         }
+	    
+	 stage('Lecture ip machine') {
+           steps {
+           dir("terraform/app") {
+                 script {
+                     def data = readFile(file: 'ip_connection.txt')
+                     println(data)
+                  }
+               }
+           }
+        }
 
 
 
