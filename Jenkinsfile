@@ -104,12 +104,18 @@ pipeline {
 
             steps {
                 dir("terraform/app") {
+		    sh "rm ip_connection.txt"
                     sh "terraform destroy --auto-approve"
                 }
             }
         }
 	    
 	 stage('Lecture ip machine') {
+	    when {
+                not {
+                    equals expected: true, actual: params.destroy
+                }
+            }
            steps {
            dir("terraform/app") {
                  script {
