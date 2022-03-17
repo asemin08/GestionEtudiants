@@ -19,9 +19,8 @@ resource "aws_instance" "projet-ec2" {
   }
 
    provisioner "local-exec" {
-    command     = "echo 'appli est disponible sur cette url : http://${var.ip_public}:8080/ >> ip_connection.txt'"
+    command     = "ls"
     interpreter = ["bash", "-c"]
-    working_dir = "${var.git_projet}/terraform/"
   }
 #   provisioner "local-exec" {
 #     command = "echo 'appli est disponible sur cette url : http://${var.ip_public}:8080/ >> ../../ip_connection.txt'"
